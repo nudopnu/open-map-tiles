@@ -1,0 +1,17 @@
+services:
+
+  server:
+    image: maptiler/tileserver-gl
+    ports: 
+    - 3636:8080
+    volumes:
+    - ./data:/data
+    environment:
+    - file=tiles.mbtiles
+
+  client:
+    image: nginx:alpine
+    volumes:
+      - ./maplibre-gljs:/usr/share/nginx/html:ro
+    ports:
+      - 8000:80

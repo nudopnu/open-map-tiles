@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>OpenMapTiles OSM Bright style</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+    <div id='map'></div>
+    <script>
+        var map = new maplibregl.Map({
+            container: 'map',
+            style: 'http://localhost:3636/styles/klokantech-basic/style.json',
+            center: [6.645220068343718, 49.75403684834063],
+            zoom: 12
+        });
+        map.on('click', (e) => {
+            // The event object (e) contains information like the
+            // coordinates of the point on the map that was clicked.
+            console.log('A click event has occurred at ' + e.lngLat);
+        });
+        let marker = new maplibregl.Marker({
+            color: "purple",
+            draggable: true
+        }).setLngLat([6.645220068343718, 49.75403684834063])
+        .addTo(map);
+    </script>
+</body>
+</html>
