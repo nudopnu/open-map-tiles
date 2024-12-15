@@ -12,6 +12,8 @@ Install [docker](https://www.docker.com/products/docker-desktop/)
 
 ### Generate custom region on windows (wsl)
 
+You will need some geo data in [pbf format](https://wiki.openstreetmap.org/wiki/PBF_Format). You can download this e.g. from https://download.geofabrik.de/.
+
 1. Run wsl ubuntu with `wsl --install`
 2. Install make with `sudo apt install make`
 3. Run `git clone https://github.com/openmaptiles/openmaptiles`
