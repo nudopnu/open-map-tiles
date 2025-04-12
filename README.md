@@ -37,7 +37,7 @@ Small increments! Never starts with the `MAX_ZOOM = 14`
 The suggested `MAX_ZOOM = 14` - use only with small extracts
 
 ### Generate custom region extract
-1. Grab a larger map (or even world map) from 
+1. Grab a larger map (or even world map) from https://download.geofabrik.de/
 2. Visit https://boundingbox.klokantech.com/ to select a region
 3. Export it at the bottom by selecting `CSV` as output
 4. In wsl run `make bash` to enter a shell in docker
