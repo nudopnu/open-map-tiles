@@ -19,8 +19,9 @@ You will need some geo data in [pbf format](https://wiki.openstreetmap.org/wiki/
 3. Run `git clone https://github.com/openmaptiles/openmaptiles`
 4. Setup your `data` folder with `mkdir -p ./openmaptiles/data && cd openmaptiles && explorer.exe .`
 5. Paste your downloaded `<your-map>.osm.pbf` inside that `data` folder
-6. Run `sudo ./quickstart.sh <your-map>` (You may need to enable wsl integration with your wsl distro in the docker desktop settings under `Settings` > `Resources` > `WSL integration`)
-7. Access the generated data under `data/tiles.mbtiles`
+6. Edit the `.env` file by setting `MAX_ZOOM=12`
+7. Run `sudo ./quickstart.sh <your-map>` (You may need to enable wsl integration with your wsl distro in the docker desktop settings under `Settings` > `Resources` > `WSL integration`)
+8. Access the generated data under `data/tiles.mbtiles`
 
 ### Set which zooms to generate
 modify the settings in the .env file, the defaults:
